@@ -1,82 +1,199 @@
 # Dibs Retail Analysis
 
-## Project Overview
+## Overview
 
-Dibs is a fast-growing retail company specializing in a wide range of products, including shoes, cosmetics, clothing, food, beverages, and souvenirs. Despite its rapid expansion, the company faces challenges in increasing sales and customer loyalty. The provided dataset contains customer purchase history across different malls, which is crucial for understanding customer behavior and improving sales and marketing strategies.
+This project explores customer purchasing behaviour and retail sales trends using Python-based business analytics techniques. The analysis was conducted on a retail transaction dataset containing over 99,000 customer purchase records across multiple shopping malls and product categories.
 
-This project focuses on analyzing the provided data to uncover insights, identify patterns and trends, and make actionable recommendations to enhance sales and customer loyalty.
+The project focuses on transforming raw retail data into actionable business insights through:
 
-## Dataset
+- Data cleaning and preprocessing
+- Exploratory data analysis (EDA)
+- Feature engineering
+- Customer segmentation
+- Sales trend analysis
+- Business intelligence reporting
+- Visual storytelling
 
-The dataset includes the following features:
+The workflow demonstrates an end-to-end retail analytics pipeline commonly used in real-world business analytics projects.
 
-- **invoice_no:** Invoice number (Nominal) - A combination of 'I' and a 6-digit integer uniquely assigned to each transaction.
-- **customer_id:** Customer number (Nominal) - A combination of 'C' and a 6-digit integer uniquely assigned to each customer.
-- **gender:** Customer's gender (String).
-- **age:** Customer's age (Positive Integer).
-- **category:** Product category (String).
-- **quantity:** Quantity of each product per transaction (Numeric).
-- **price:** Unit price in Turkish Liras (TL) (Numeric).
-- **payment_method:** Payment method used (cash, credit card, or debit card) (String).
-- **invoice_date:** Date of the transaction (Date).
-- **shopping_mall:** Name of the shopping mall where the transaction occurred (String).
+---
 
-## Project Objectives
+## Dataset Summary
 
-### Data Cleansing
+The dataset contains transactional retail information including:
 
-1. **Handling Missing Values:** Address missing values in the dataset.
-2. **Data Type Conversion:** Convert data types as needed for accurate analysis.
-3. **Handling Duplicates:** Identify and remove duplicate records.
-4. **Histograms:** Create histograms to check data distribution.
-5. **Outliers:** Detect and manage outliers.
+- Customer demographics
+- Product categories
+- Quantity purchased
+- Payment methods
+- Shopping mall locations
+- Invoice dates
+- Product pricing
 
-### Analysis
+### Dataset Size
 
-Perform insightful analysis using the following techniques:
+- Rows: 99,461
+- Columns: 10
 
-1. **Customer Segments:** Identify which customer segments or categories should be targeted for marketing campaigns.
-2. **Spending Behavior:** Create a box plot to compare the distribution of spending scores between male and female customers.
-3. **Age and Spending:** Create a scatter plot to visualize the relationship between age and spending.
-4. **Age Groups:** Segment customers into different age groups and analyze how spending scores vary across these groups.
+> Note: The original dataset is excluded from this repository for privacy and distribution considerations.
 
-### Recommendations
+---
 
-1. **Sales by Payment Method:** Visualize the proportion of total sales made by each payment method to understand customer payment preferences.
-2. **Sales Trend Over Time:** Create a line chart to visualize total monthly sales and identify any trends or patterns.
+## Business Objectives
 
-## Getting Started
+This project aims to answer several key retail business questions:
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/dibs-retail-analysis.git
-   ```
+- Which product categories generate the highest sales?
+- Which customer age groups contribute most to revenue?
+- What payment methods are most preferred?
+- Which shopping malls attract the highest customer activity?
+- How do customer purchasing behaviours vary across demographics?
+- What sales trends exist over time?
 
-2. **Install Dependencies:**
-   Ensure you have the required Python packages installed:
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-3. **Run the Notebook:**
-   Start Jupyter Notebook and open the analysis notebook:
-   ```bash
-   jupyter notebook
-   ```
+## Project Workflow
 
-4. **Access the Data:**
-   The dataset and README file describing the features are included in the repository.
+### 1. Data Cleaning & Preprocessing
+
+The project includes extensive preprocessing and data quality handling:
+
+- Missing value treatment
+- Incorrect category correction
+- Date conversion and formatting
+- Data type optimisation
+- Duplicate validation
+- Outlier detection and handling
+- Skewness reduction using Box-Cox transformation
+
+### 2. Exploratory Data Analysis (EDA)
+
+Exploratory analysis was performed to identify:
+
+- Customer demographic distributions
+- Product category trends
+- Shopping mall activity
+- Quantity and price distributions
+- Payment method preferences
+- Sales behaviour patterns
+
+### 3. Feature Engineering
+
+Additional analytical features were created including:
+
+- Spending score
+- Age segmentation groups
+- Monthly sales aggregation
+- Time-based variables (year, month, date)
+
+### 4. Business Analytics & Insights
+
+The project generated business-focused insights regarding:
+
+- High-performing product categories
+- Revenue contribution by age group
+- Customer spending behaviour
+- Payment preference analysis
+- Monthly sales trends
+- Strategic retail recommendations
+
+---
+
+## Key Insights
+
+### Product Category Performance
+
+- Clothing generated the highest sales volume across all categories.
+- Books, souvenirs, and technology products showed comparatively lower sales activity.
+
+### Customer Spending Behaviour
+
+- Customers aged 56+ contributed the highest overall spending.
+- Male and female customers showed similar median spending behaviour.
+
+### Payment Method Analysis
+
+- Cash was the most frequently used payment method.
+- Debit cards showed the lowest transaction share.
+
+### Time Series Trends
+
+- Monthly sales remained relatively stable across 2021–2022.
+- Seasonal peaks appeared during mid-year and end-of-year periods.
+- A noticeable sales drop occurred in March 2023, indicating potential business or operational changes.
+
+---
+
+## Key Visualisations
+
+### Monthly Sales Trend
+
+This visual highlights overall retail sales performance over time and reveals seasonal sales behaviour, stable monthly revenue patterns, and a noticeable drop in the final month due to incomplete transactional data.
+
+![Monthly Sales Trend](visuals/charts/monthly_sales_trend.png)
+
+---
+
+### Spending by Age Group
+
+This analysis shows that customers aged 56+ contributed the highest overall spending, indicating a strong high-value customer segment within the retail business.
+
+![Spending by Age Group](visuals/charts/spending_by_age_group.png)
+
+---
+
+### Product Category Demand Distribution
+
+This visual demonstrates purchasing behaviour across product categories, with Clothing significantly outperforming other categories in total purchase volume.
+
+![Category Distribution](visuals/charts/category_distribution.png)
+
+---
+
+### Customer Payment Method Distribution
+
+This chart highlights customer payment preferences, showing Cash as the dominant payment method followed by Credit Card transactions.
+
+![Payment Method Analysis](visuals/charts/payment_method_analysis.png)
+
+---
+
+### Customer Spending Distribution by Gender
+
+The boxplot compares spending distributions between male and female customers and highlights similar median spending behaviour with several high-spending outliers.
+
+![Gender Spending Boxplot](visuals/charts/gender_spending_boxplot.png)
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- Jupyter Notebook
+
+---
 
 ## Repository Structure
 
-- `notebooks/`: Contains Jupyter Notebooks with data analysis and visualizations.
-- `data/`: Includes the dataset file and description.
-- `requirements.txt`: Lists Python packages needed for the project.
-
-## Contributions
-
-Contributions are welcome! If you have any suggestions or improvements, please submit issues or pull requests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```bash
+dibs-retail-analysis/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── notebooks/
+│   └── DibsRetailAnalysis.ipynb
+│
+├── reports/
+│   └── DibsRetailAnalysis.pdf
+│
+├── visuals/
+│
+├── README.md
+└── .gitignore
