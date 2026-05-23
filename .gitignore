@@ -1,0 +1,13 @@
+# Data files
+data/raw/
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac system files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
